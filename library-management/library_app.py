@@ -47,26 +47,26 @@ if 'books_data' not in st.session_state:
             'description': 'Sách kinh điển về phát triển bản thân trong giao tiếp để thành công'
         },
         'B004': {
-            'title': 'Sapiens: Lược Sử Loài Người',
-            'author': 'Yuval Noah Harari',
-            'category': 'Khoa học',
-            'isbn': '978-604-2-55555-5',
-            'publisher': 'NXB Thế Giới',
-            'year': 2019,
+            'title': 'Chuyện con ốc sên muốn biết vì sao nó chậm chạp',
+            'author': 'Luis Sepúlveda',
+            'category': 'Truyện thiếu nhi',
+            'isbn': '978-000-0-55555-5',
+            'publisher': 'Nhã Nam',
+            'year': 2015,
             'copies_total': 4,
             'copies_available': 4,
-            'description': 'Cuốn sách khám phá lịch sử tiến hóa của loài người'
+            'description': 'Truyện kể về hành trình tìm hiểu lý do vì sao ốc sên chậm chạp, mang ý nghĩa giáo dục và giải trí cho trẻ em.'
         },
         'B005': {
-            'title': 'Nhà Giả Kim',
-            'author': 'Paulo Coelho',
-            'category': 'Văn học nước ngoài',
+            'title': 'Python Crash Course',
+            'author': 'Eric Matthes',
+            'category': 'Lập trình',
             'isbn': '978-604-2-11111-1',
-            'publisher': 'NXB Văn Học',
-            'year': 2017,
+            'publisher': 'No Starch Press',
+            'year': 2015,
             'copies_total': 6,
             'copies_available': 6,
-            'description': 'Câu chuyện về hành trình tìm kiếm kho báu của chàng chăn cừu'
+            'description': 'Cuốn sách cung cấp kiến thức cơ bản về ngôn ngữ lập trình Python'
         }
     }
 
