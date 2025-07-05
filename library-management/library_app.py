@@ -60,6 +60,18 @@ if 'books_data' not in st.session_state:
             'copies_available': 2,
             'description': 'Cuốn sách khám phá lịch sử tiến hóa của loài người',
             'image_url': 'https://via.placeholder.com/150x200?text=Sapiens'
+        },
+        'B005': {
+            'title': 'Nhà Giả Kim',
+            'author': 'Paulo Coelho',
+            'category': 'Văn học nước ngoài',
+            'isbn': '978-604-2-11111-1',
+            'publisher': 'NXB Văn Học',
+            'year': 2017,
+            'copies_total': 6,
+            'copies_available': 4,
+            'description': 'Câu chuyện về hành trình tìm kiếm kho báu của chàng chăn cừu',
+            'image_url': 'https://via.placeholder.com/150x200?text=Nhà+Giả+Kim'
         }
     }
 
@@ -109,7 +121,7 @@ def login_form():
             st.session_state.current_user = user_id
             st.rerun()
 
-def display_book_card(book_id, book_info):
+def display_book_card(book_id, book_info, context=""):
     with st.container():
         col1, col2 = st.columns([1, 3])
         
@@ -126,12 +138,12 @@ def display_book_card(book_id, book_info):
             # Trạng thái sách
             if book_info['copies_available'] > 0:
                 st.success(f"Còn {book_info['copies_available']}/{book_info['copies_total']} cuốn")
-                if st.button(f"Mượn sách", key=f"borrow_{book_id}"):
+                if st.button(f"Mượn sách", key=f"borrow_{book_id}_{context}"):
                     borrow_book(book_id)
             else:
                 st.error("Hết sách")
             
-            with st.expander("Chi tiết"):
+            with st.expander("Chi tiết", key=f"detail_{book_id}_{context}"):
                 st.write(book_info['description'])
 
 def borrow_book(book_id):
@@ -197,7 +209,7 @@ def main_app():
         # Hiển thị sách
         for book_id, book_info in st.session_state.books_data.items():
             if selected_category == "Tất cả" or book_info['category'] == selected_category:
-                display_book_card(book_id, book_info)
+                display_book_card(book_id, book_info, "list")
                 st.divider()
     
     with tab2:
@@ -215,8 +227,8 @@ def main_app():
             
             if found_books:
                 st.write(f"Tìm thấy {len(found_books)} kết quả:")
-                for book_id, book_info in found_books:
-                    display_book_card(book_id, book_info)
+                for i, (book_id, book_info) in enumerate(found_books):
+                    display_book_card(book_id, book_info, f"search_{i}")
                     st.divider()
             else:
                 st.warning("Không tìm thấy sách nào phù hợp.")
@@ -230,7 +242,7 @@ def main_app():
         ]
         
         if user_borrowed_books:
-            for record in user_borrowed_books:
+            for i, record in enumerate(user_borrowed_books):
                 book_info = st.session_state.books_data[record['book_id']]
                 
                 col1, col2, col3, col4 = st.columns([3, 2, 2, 1])
@@ -256,7 +268,7 @@ def main_app():
                 
                 with col4:
                     if record['status'] == 'Đang mượn':
-                        if st.button("Trả sách", key=f"return_{record['book_id']}_{record['borrow_date']}"):
+                        if st.button("Trả sách", key=f"return_{record['book_id']}_{record['borrow_date']}_{i}"):
                             return_book(record['book_id'])
                 
                 st.divider()
