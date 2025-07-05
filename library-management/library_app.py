@@ -22,8 +22,7 @@ if 'books_data' not in st.session_state:
             'year': 2010,
             'copies_total': 5,
             'copies_available': 5,
-            'description': 'Cuốn tiểu thuyết nổi tiếng về tuổi thơ miền quê Việt Nam',
-            'image_url': 'https://via.placeholder.com/150x200?text=Tôi+Thấy+Hoa+Vàng'
+            'description': 'Cuốn tiểu thuyết nổi tiếng về tuổi thơ miền quê Việt Nam'
         },
         'B002': {
             'title': 'Cây Cam Ngọt Của Tôi',
@@ -34,8 +33,7 @@ if 'books_data' not in st.session_state:
             'year': 2020,
             'copies_total': 3,
             'copies_available': 3,
-            'description': 'Câu chuyện cảm động về tuổi thơ của cậu bé Brazil',
-            'image_url': 'https://via.placeholder.com/150x200?text=Cây+Cam+Ngọt'
+            'description': 'Câu chuyện cảm động về tuổi thơ của cậu bé Brazil'
         },
         'B003': {
             'title': 'Đắc Nhân Tâm',
@@ -46,8 +44,7 @@ if 'books_data' not in st.session_state:
             'year': 2018,
             'copies_total': 8,
             'copies_available': 8,
-            'description': 'Sách kinh điển về phát triển bản thân trong giao tiếp để thành công',
-            'image_url': 'https://via.placeholder.com/150x200?text=Đắc+Nhân+Tâm'
+            'description': 'Sách kinh điển về phát triển bản thân trong giao tiếp để thành công'
         },
         'B004': {
             'title': 'Sapiens: Lược Sử Loài Người',
@@ -58,8 +55,7 @@ if 'books_data' not in st.session_state:
             'year': 2019,
             'copies_total': 4,
             'copies_available': 4,
-            'description': 'Cuốn sách khám phá lịch sử tiến hóa của loài người',
-            'image_url': 'https://via.placeholder.com/150x200?text=Sapiens'
+            'description': 'Cuốn sách khám phá lịch sử tiến hóa của loài người'
         },
         'B005': {
             'title': 'Nhà Giả Kim',
@@ -70,8 +66,7 @@ if 'books_data' not in st.session_state:
             'year': 2017,
             'copies_total': 6,
             'copies_available': 6,
-            'description': 'Câu chuyện về hành trình tìm kiếm kho báu của chàng chăn cừu',
-            'image_url': 'https://via.placeholder.com/150x200?text=Nhà+Giả+Kim'
+            'description': 'Câu chuyện về hành trình tìm kiếm kho báu của chàng chăn cừu'
         }
     }
 
