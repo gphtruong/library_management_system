@@ -143,7 +143,7 @@ def display_book_card(book_id, book_info, context=""):
             else:
                 st.error("Hết sách")
             
-            with st.expander("Chi tiết", key=f"detail_{book_id}_{context}"):
+            with st.expander("Chi tiết"):
                 st.write(book_info['description'])
 
 def borrow_book(book_id):
