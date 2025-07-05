@@ -60,18 +60,6 @@ if 'books_data' not in st.session_state:
             'copies_available': 2,
             'description': 'Cuốn sách khám phá lịch sử tiến hóa của loài người',
             'image_url': 'https://via.placeholder.com/150x200?text=Sapiens'
-        },
-        'B005': {
-            'title': 'Nhà Giả Kim',
-            'author': 'Paulo Coelho',
-            'category': 'Văn học nước ngoài',
-            'isbn': '978-604-2-11111-1',
-            'publisher': 'NXB Văn Học',
-            'year': 2017,
-            'copies_total': 6,
-            'copies_available': 4,
-            'description': 'Câu chuyện về hành trình tìm kiếm kho báu của chàng chăn cừu',
-            'image_url': 'https://via.placeholder.com/150x200?text=Nhà+Giả+Kim'
         }
     }
 
