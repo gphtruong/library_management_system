@@ -21,8 +21,9 @@ if 'books_data' not in st.session_state:
             'publisher': 'NXB Trẻ',
             'year': 2010,
             'copies_total': 5,
-            'copies_available': 5,
-            'description': 'Cuốn tiểu thuyết nổi tiếng về tuổi thơ miền quê Việt Nam'
+            'copies_available': 3,
+            'description': 'Cuốn tiểu thuyết nổi tiếng về tuổi thơ miền quê Việt Nam',
+            'image_url': 'https://via.placeholder.com/150x200?text=Tôi+Thấy+Hoa+Vàng'
         },
         'B002': {
             'title': 'Cây Cam Ngọt Của Tôi',
@@ -32,8 +33,9 @@ if 'books_data' not in st.session_state:
             'publisher': 'NXB Hội Nhà Văn',
             'year': 2020,
             'copies_total': 3,
-            'copies_available': 3,
+            'copies_available': 1,
             'description': 'Câu chuyện cảm động về tuổi thơ của cậu bé Brazil',
+            'image_url': 'https://via.placeholder.com/150x200?text=Cây+Cam+Ngọt'
         },
         'B003': {
             'title': 'Đắc Nhân Tâm',
@@ -43,8 +45,9 @@ if 'books_data' not in st.session_state:
             'publisher': 'NXB Tổng Hợp TPHCM',
             'year': 2018,
             'copies_total': 8,
-            'copies_available': 8,
-            'description': 'Sách kinh điển về phát triển cá nhân trong giao tiếp để thành công',
+            'copies_available': 5,
+            'description': 'Sách self-help kinh điển về giao tiếp và thành công',
+            'image_url': 'https://via.placeholder.com/150x200?text=Đắc+Nhân+Tâm'
         },
         'B004': {
             'title': 'Sapiens: Lược Sử Loài Người',
@@ -54,8 +57,9 @@ if 'books_data' not in st.session_state:
             'publisher': 'NXB Thế Giới',
             'year': 2019,
             'copies_total': 4,
-            'copies_available': 4,
-            'description': 'Cuốn sách khám phá lịch sử tiến hóa của loài người'
+            'copies_available': 2,
+            'description': 'Cuốn sách khám phá lịch sử tiến hóa của loài người',
+            'image_url': 'https://via.placeholder.com/150x200?text=Sapiens'
         },
         'B005': {
             'title': 'Nhà Giả Kim',
@@ -65,8 +69,9 @@ if 'books_data' not in st.session_state:
             'publisher': 'NXB Văn Học',
             'year': 2017,
             'copies_total': 6,
-            'copies_available': 6,
-            'description': 'Câu chuyện về hành trình tìm kiếm kho báu của chàng chăn cừu'
+            'copies_available': 4,
+            'description': 'Câu chuyện về hành trình tìm kiếm kho báu của chàng chăn cừu',
+            'image_url': 'https://via.placeholder.com/150x200?text=Nhà+Giả+Kim'
         }
     }
 
@@ -121,7 +126,24 @@ def display_book_card(book_id, book_info, context=""):
         col1, col2 = st.columns([1, 3])
         
         with col1:
-            st.image(book_info['image_url'], width=120)
+            # Hiển thị ảnh nếu có, nếu không thì hiển thị placeholder
+            if 'image_url' in book_info and book_info['image_url']:
+                st.image(book_info['image_url'], width=120)
+            else:
+                # Tạo placeholder đơn giản
+                st.markdown(
+                    f"""
+                    <div style="width: 120px; height: 160px; background-color: #f0f2f6; 
+                                border: 2px dashed #ccc; display: flex; align-items: center; 
+                                justify-content: center; text-align: center; color: #666;">
+                        <div>
+                            <div style="font-size: 24px;">📚</div>
+                            <div style="font-size: 10px;">Không có ảnh</div>
+                        </div>
+                    </div>
+                    """, 
+                    unsafe_allow_html=True
+                )
         
         with col2:
             st.subheader(book_info['title'])
