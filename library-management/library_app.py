@@ -21,7 +21,7 @@ if 'books_data' not in st.session_state:
             'publisher': 'NXB Trẻ',
             'year': 2010,
             'copies_total': 5,
-            'copies_available': 3,
+            'copies_available': 5,
             'description': 'Cuốn tiểu thuyết nổi tiếng về tuổi thơ miền quê Việt Nam',
             'image_url': 'https://via.placeholder.com/150x200?text=Tôi+Thấy+Hoa+Vàng'
         },
@@ -33,7 +33,7 @@ if 'books_data' not in st.session_state:
             'publisher': 'NXB Hội Nhà Văn',
             'year': 2020,
             'copies_total': 3,
-            'copies_available': 1,
+            'copies_available': 3,
             'description': 'Câu chuyện cảm động về tuổi thơ của cậu bé Brazil',
             'image_url': 'https://via.placeholder.com/150x200?text=Cây+Cam+Ngọt'
         },
@@ -45,8 +45,8 @@ if 'books_data' not in st.session_state:
             'publisher': 'NXB Tổng Hợp TPHCM',
             'year': 2018,
             'copies_total': 8,
-            'copies_available': 5,
-            'description': 'Sách self-help kinh điển về giao tiếp và thành công',
+            'copies_available': 8,
+            'description': 'Sách kinh điển về phát triển bản thân trong giao tiếp để thành công',
             'image_url': 'https://via.placeholder.com/150x200?text=Đắc+Nhân+Tâm'
         },
         'B004': {
@@ -57,7 +57,7 @@ if 'books_data' not in st.session_state:
             'publisher': 'NXB Thế Giới',
             'year': 2019,
             'copies_total': 4,
-            'copies_available': 2,
+            'copies_available': 4,
             'description': 'Cuốn sách khám phá lịch sử tiến hóa của loài người',
             'image_url': 'https://via.placeholder.com/150x200?text=Sapiens'
         },
@@ -69,7 +69,7 @@ if 'books_data' not in st.session_state:
             'publisher': 'NXB Văn Học',
             'year': 2017,
             'copies_total': 6,
-            'copies_available': 4,
+            'copies_available': 6,
             'description': 'Câu chuyện về hành trình tìm kiếm kho báu của chàng chăn cừu',
             'image_url': 'https://via.placeholder.com/150x200?text=Nhà+Giả+Kim'
         }
