@@ -3,10 +3,9 @@
 A simple Streamlit-based library management web app.
 
 ## Features
-
-- Add/remove books (librarian)
-- Borrow/return books (members)
-- Borrowing limits by member type
+- Manage current books in library
+- Search for books
+- Mark borrowed/returned books for members
 
 ## Setup
 
@@ -17,11 +16,9 @@ A simple Streamlit-based library management web app.
    `streamlit run library_app.py`
 
 3. **Run tests**  
-   `pytest test_library.py`
+   `pytest library_app.py`
 
 ## Project Structure
 
-- `library_core.py`: Core logic and classes
-- `library_app.py`: Streamlit UI
-- `test_library.py`: Tests for core logic
-- `data/`: Sample data 
+- requirements.txt
+- `library_app.py`: Streamlit UI 
