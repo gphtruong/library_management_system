@@ -15,9 +15,6 @@ A simple Streamlit-based library management web app.
 2. **Run the app**  
    `streamlit run library_app.py`
 
-3. **Run tests**  
-   `pytest library_app.py`
-
 ## Project Structure
 
 - requirements.txt
