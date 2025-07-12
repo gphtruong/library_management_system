@@ -47,7 +47,7 @@ if 'books_data' not in st.session_state:
             'description': 'Sách kinh điển về phát triển bản thân trong giao tiếp để thành công'
         },
         'B004': {
-            'title': 'Chuyện con ốc sên muốn biết vì sao nó chậm chạp',
+            'title': 'Chuyện Con Ốc Sên Muốn Biết Vì Sao Nó Chậm Chạp',
             'author': 'Luis Sepúlveda',
             'category': 'Truyện thiếu nhi',
             'isbn': '978-000-0-55555-5',
